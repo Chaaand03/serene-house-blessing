@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 import { GoldDivider } from "@/components/GoldDivider";
 import { Kalash } from "@/components/Kalash";
-import { PeacockFeather } from "@/components/PeacockFeather";
 import { CornerOrnament } from "@/components/CornerOrnament";
 import { Bansuri } from "@/components/Bansuri";
 import { FadeIn } from "@/components/Section";
@@ -29,40 +28,21 @@ function Index() {
       <CornerOrnament className="absolute bottom-0 left-0 w-44 sm:w-64 -scale-y-100 pointer-events-none" />
       <CornerOrnament className="absolute bottom-0 right-0 w-44 sm:w-64 -scale-100 pointer-events-none" />
 
-      {/* Floating realistic peacock feathers */}
-      <PeacockFeather
-        className="hidden md:block absolute top-24 -left-12 w-24 opacity-55 feather-glow float-slow pointer-events-none"
-        // @ts-expect-error css var
-        style={{ "--r": "-22deg", transform: "rotate(-22deg)" }}
-      />
-      <PeacockFeather
-        className="hidden md:block absolute top-48 -right-10 w-28 opacity-55 feather-glow float-slow pointer-events-none"
-        // @ts-expect-error css var
-        style={{ "--r": "22deg", transform: "rotate(22deg)", animationDelay: "1.5s" }}
-      />
-      <PeacockFeather
-        className="hidden lg:block absolute bottom-40 -left-6 w-20 opacity-45 feather-glow float-slow pointer-events-none"
-        // @ts-expect-error css var
-        style={{ "--r": "-15deg", transform: "rotate(-15deg)", animationDelay: "3s" }}
-      />
-
       <div className="relative mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        {/* HERO — kalash crowned with crossed feathers */}
+        {/* HERO — grand kalash */}
         <section className="text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.85, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto h-56 sm:h-72 w-full flex items-end justify-center"
+            className="relative mx-auto flex justify-center"
           >
-            {/* Background feathers fanning behind the kalash */}
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-4 w-28 sm:w-36 -rotate-[35deg] origin-bottom feather-glow opacity-90" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-4 w-28 sm:w-36 rotate-[35deg] origin-bottom feather-glow opacity-90" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-8 w-24 sm:w-32 -rotate-[18deg] origin-bottom feather-glow" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-8 w-24 sm:w-32 rotate-[18deg] origin-bottom feather-glow" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-10 w-28 sm:w-36 feather-glow z-10" />
-            {/* Grand kalash front and centre */}
-            <Kalash className="relative z-20 w-28 sm:w-36 drop-shadow-[0_0_25px_oklch(0.82_0.14_85/0.55)]" />
+            {/* Soft golden halo */}
+            <div
+              className="absolute inset-0 -z-10 mx-auto h-56 w-56 sm:h-72 sm:w-72 rounded-full blur-2xl"
+              style={{ background: "radial-gradient(circle, oklch(0.82 0.14 85 / 0.35), transparent 70%)" }}
+            />
+            <Kalash className="w-32 sm:w-44 drop-shadow-[0_0_25px_oklch(0.82_0.14_85/0.55)]" />
           </motion.div>
 
           <motion.p
@@ -101,8 +81,7 @@ function Index() {
             <p className="mt-7 text-base sm:text-lg leading-relaxed text-cream/75 font-serif italic">
               As we step into our new home, we seek the blessings of Lord Krishna
               and the warm presence of those who matter most. May your love and
-              good wishes fill these walls with joy, light, and prosperity —
-              like the iridescence of a thousand peacock feathers.
+              good wishes fill these walls with joy, light, and prosperity.
               <br />
               <br />
               We would be deeply honoured if you could join us on this auspicious occasion.
@@ -148,8 +127,6 @@ function Index() {
               className="mt-8 inline-block px-10 py-10 sm:px-14 sm:py-12 rounded-sm border border-gold/40 shadow-elegant relative"
               style={{ background: "linear-gradient(135deg, oklch(0.20 0.08 263), oklch(0.16 0.07 265))" }}
             >
-              <PeacockFeather className="absolute -top-8 -left-6 w-12 -rotate-[35deg] feather-glow" />
-              <PeacockFeather className="absolute -top-8 -right-6 w-12 rotate-[35deg] feather-glow" />
               <Heart className="w-5 h-5 text-gold mx-auto mb-5" strokeWidth={1.5} />
               <ul className="space-y-3">
                 {FAMILY.map((name) => (
@@ -183,7 +160,7 @@ function Index() {
           </section>
         </FadeIn>
 
-        {/* KRISHNA'S FLUTE — closing blessing */}
+        {/* KRISHNA'S FLUTE */}
         <FadeIn delay={0.1}>
           <section className="mt-20 text-center">
             <p className="text-xs tracking-[0.45em] uppercase text-gold mb-6 shimmer">
