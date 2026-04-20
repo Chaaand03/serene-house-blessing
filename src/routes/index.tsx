@@ -4,6 +4,8 @@ import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 import { GoldDivider } from "@/components/GoldDivider";
 import { Kalash } from "@/components/Kalash";
 import { PeacockFeather } from "@/components/PeacockFeather";
+import { CornerOrnament } from "@/components/CornerOrnament";
+import { Bansuri } from "@/components/Bansuri";
 import { FadeIn } from "@/components/Section";
 
 export const Route = createFileRoute("/")({
@@ -21,43 +23,46 @@ const RSVP_WHATSAPP = "https://wa.me/919999999999?text=I%20will%20attend%20the%2
 function Index() {
   return (
     <main className="relative min-h-screen mandala-bg overflow-hidden">
-      {/* Decorative corner mandalas */}
-      <DecorativeCorner className="absolute top-0 left-0 w-40 sm:w-64 text-gold/25" />
-      <DecorativeCorner className="absolute top-0 right-0 w-40 sm:w-64 text-gold/25 scale-x-[-1]" />
-      <DecorativeCorner className="absolute bottom-0 left-0 w-40 sm:w-64 text-gold/25 scale-y-[-1]" />
-      <DecorativeCorner className="absolute bottom-0 right-0 w-40 sm:w-64 text-gold/25 -scale-100" />
+      {/* Corner ornaments — flowers + diya lamps */}
+      <CornerOrnament className="absolute top-0 left-0 w-44 sm:w-64 pointer-events-none" />
+      <CornerOrnament className="absolute top-0 right-0 w-44 sm:w-64 -scale-x-100 pointer-events-none" />
+      <CornerOrnament className="absolute bottom-0 left-0 w-44 sm:w-64 -scale-y-100 pointer-events-none" />
+      <CornerOrnament className="absolute bottom-0 right-0 w-44 sm:w-64 -scale-100 pointer-events-none" />
 
-      {/* Floating peacock feathers in background */}
+      {/* Floating realistic peacock feathers */}
       <PeacockFeather
-        className="hidden md:block absolute top-10 -left-10 w-28 opacity-50 feather-glow float-slow"
+        className="hidden md:block absolute top-24 -left-12 w-24 opacity-55 feather-glow float-slow pointer-events-none"
         // @ts-expect-error css var
-        style={{ "--r": "-22deg" }}
+        style={{ "--r": "-22deg", transform: "rotate(-22deg)" }}
       />
       <PeacockFeather
-        className="hidden md:block absolute top-32 -right-8 w-32 opacity-50 feather-glow float-slow"
+        className="hidden md:block absolute top-48 -right-10 w-28 opacity-55 feather-glow float-slow pointer-events-none"
         // @ts-expect-error css var
-        style={{ "--r": "20deg", animationDelay: "1.5s" }}
+        style={{ "--r": "22deg", transform: "rotate(22deg)", animationDelay: "1.5s" }}
       />
       <PeacockFeather
-        className="hidden lg:block absolute bottom-20 left-4 w-24 opacity-40 feather-glow float-slow"
+        className="hidden lg:block absolute bottom-40 -left-6 w-20 opacity-45 feather-glow float-slow pointer-events-none"
         // @ts-expect-error css var
-        style={{ "--r": "-12deg", animationDelay: "3s" }}
+        style={{ "--r": "-15deg", transform: "rotate(-15deg)", animationDelay: "3s" }}
       />
 
       <div className="relative mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        {/* HERO */}
+        {/* HERO — kalash crowned with crossed feathers */}
         <section className="text-center">
-          {/* Crossed peacock feathers crown */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto h-44 sm:h-52 w-full flex items-end justify-center"
+            className="relative mx-auto h-56 sm:h-72 w-full flex items-end justify-center"
           >
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-0 w-28 sm:w-36 -rotate-[28deg] origin-bottom feather-glow" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-0 w-28 sm:w-36 rotate-[28deg] origin-bottom feather-glow" />
-            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-0 w-32 sm:w-40 feather-glow z-10" />
-            <Kalash className="relative z-20 w-14 sm:w-16 text-gold drop-shadow-[0_0_15px_oklch(0.82_0.14_85/0.5)]" />
+            {/* Background feathers fanning behind the kalash */}
+            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-4 w-28 sm:w-36 -rotate-[35deg] origin-bottom feather-glow opacity-90" />
+            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-4 w-28 sm:w-36 rotate-[35deg] origin-bottom feather-glow opacity-90" />
+            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-8 w-24 sm:w-32 -rotate-[18deg] origin-bottom feather-glow" />
+            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-8 w-24 sm:w-32 rotate-[18deg] origin-bottom feather-glow" />
+            <PeacockFeather className="absolute left-1/2 -translate-x-1/2 bottom-10 w-28 sm:w-36 feather-glow z-10" />
+            {/* Grand kalash front and centre */}
+            <Kalash className="relative z-20 w-28 sm:w-36 drop-shadow-[0_0_25px_oklch(0.82_0.14_85/0.55)]" />
           </motion.div>
 
           <motion.p
@@ -90,7 +95,6 @@ function Index() {
 
         <GoldDivider />
 
-        {/* INVITE MESSAGE */}
         <FadeIn>
           <section className="text-center px-2">
             <h2 className="font-serif text-3xl sm:text-4xl text-cream">With folded hands & open hearts</h2>
@@ -108,7 +112,6 @@ function Index() {
 
         <GoldDivider />
 
-        {/* EVENT DETAILS */}
         <FadeIn>
           <section>
             <h2 className="text-center font-serif text-3xl sm:text-5xl gradient-gold-text mb-12">
@@ -138,7 +141,6 @@ function Index() {
 
         <GoldDivider />
 
-        {/* FAMILY */}
         <FadeIn>
           <section className="text-center">
             <p className="text-xs tracking-[0.45em] uppercase text-gold shimmer">With Love,</p>
@@ -146,9 +148,8 @@ function Index() {
               className="mt-8 inline-block px-10 py-10 sm:px-14 sm:py-12 rounded-sm border border-gold/40 shadow-elegant relative"
               style={{ background: "linear-gradient(135deg, oklch(0.20 0.08 263), oklch(0.16 0.07 265))" }}
             >
-              {/* Tiny corner feathers */}
-              <PeacockFeather className="absolute -top-6 -left-6 w-10 -rotate-[35deg] feather-glow" />
-              <PeacockFeather className="absolute -top-6 -right-6 w-10 rotate-[35deg] feather-glow" />
+              <PeacockFeather className="absolute -top-8 -left-6 w-12 -rotate-[35deg] feather-glow" />
+              <PeacockFeather className="absolute -top-8 -right-6 w-12 rotate-[35deg] feather-glow" />
               <Heart className="w-5 h-5 text-gold mx-auto mb-5" strokeWidth={1.5} />
               <ul className="space-y-3">
                 {FAMILY.map((name) => (
@@ -166,7 +167,6 @@ function Index() {
 
         <GoldDivider />
 
-        {/* RSVP */}
         <FadeIn>
           <section className="text-center">
             <h2 className="font-serif text-2xl sm:text-3xl text-cream">Kindly let us know</h2>
@@ -183,10 +183,29 @@ function Index() {
           </section>
         </FadeIn>
 
-        <footer className="mt-24 text-center">
-          <div className="flex justify-center mb-4 opacity-70">
-            <PeacockFeather className="w-12 feather-glow" />
-          </div>
+        {/* KRISHNA'S FLUTE — closing blessing */}
+        <FadeIn delay={0.1}>
+          <section className="mt-20 text-center">
+            <p className="text-xs tracking-[0.45em] uppercase text-gold mb-6 shimmer">
+              Murali Naadam · मुरली नादम्
+            </p>
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              className="mx-auto w-full max-w-md"
+            >
+              <Bansuri className="w-full" />
+            </motion.div>
+            <p className="mt-6 font-serif italic text-cream/70 text-base sm:text-lg max-w-md mx-auto">
+              May the divine melody of Krishna's bansuri bless this home with
+              peace, love, and unending music.
+            </p>
+          </section>
+        </FadeIn>
+
+        <footer className="mt-20 text-center">
           <p className="text-xs tracking-[0.35em] uppercase text-gold/80">
             Śubham Bhavatu • शुभं भवतु
           </p>
@@ -202,7 +221,6 @@ function DetailCard({ icon, label, value }: { icon: React.ReactNode; label: stri
       className="relative rounded-sm border border-gold/30 p-7 text-center shadow-soft transition-all hover:shadow-elegant hover:-translate-y-1 hover:border-gold/60"
       style={{ background: "linear-gradient(160deg, oklch(0.20 0.08 263 / 0.95), oklch(0.15 0.07 265 / 0.95))" }}
     >
-      {/* Top gold accent */}
       <span className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-12 bg-gold" />
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-full border border-gold/60 text-gold bg-navy/40">
         {icon}
@@ -210,27 +228,5 @@ function DetailCard({ icon, label, value }: { icon: React.ReactNode; label: stri
       <p className="text-[10px] tracking-[0.35em] uppercase text-gold mb-2">{label}</p>
       <p className="font-serif text-cream text-base leading-snug">{value}</p>
     </div>
-  );
-}
-
-function DecorativeCorner({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 200 200" className={className} fill="none" stroke="currentColor" strokeWidth="0.6">
-      <circle cx="0" cy="0" r="60" />
-      <circle cx="0" cy="0" r="90" />
-      <circle cx="0" cy="0" r="120" strokeDasharray="2 4" />
-      <circle cx="0" cy="0" r="150" />
-      <g>
-        {Array.from({ length: 12 }).map((_, i) => (
-          <line
-            key={i}
-            x1="0"
-            y1="0"
-            x2={Math.cos((i * Math.PI) / 24) * 160}
-            y2={Math.sin((i * Math.PI) / 24) * 160}
-          />
-        ))}
-      </g>
-    </svg>
   );
 }
