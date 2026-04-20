@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 import { GoldDivider } from "@/components/GoldDivider";
-import { Kalash } from "@/components/Kalash";
+import { OmSymbol } from "@/components/OmSymbol";
 import { CornerOrnament } from "@/components/CornerOrnament";
 import { Bansuri } from "@/components/Bansuri";
 import { FadeIn } from "@/components/Section";
@@ -25,11 +25,11 @@ function Index() {
       {/* Corner ornaments — flowers + diya lamps */}
       <CornerOrnament className="absolute top-0 left-0 w-44 sm:w-64 pointer-events-none" />
       <CornerOrnament className="absolute top-0 right-0 w-44 sm:w-64 -scale-x-100 pointer-events-none" />
-      <CornerOrnament className="absolute bottom-0 left-0 w-44 sm:w-64 -scale-y-100 pointer-events-none" />
-      <CornerOrnament className="absolute bottom-0 right-0 w-44 sm:w-64 -scale-100 pointer-events-none" />
+      <CornerOrnament className="absolute bottom-0 left-0 w-44 sm:w-64 pointer-events-none" />
+      <CornerOrnament className="absolute bottom-0 right-0 w-44 sm:w-64 -scale-x-100 pointer-events-none" />
 
       <div className="relative mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        {/* HERO — grand kalash */}
+        {/* HERO — Om symbol */}
         <section className="text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.85, y: 20 }}
@@ -42,7 +42,7 @@ function Index() {
               className="absolute inset-0 -z-10 mx-auto h-56 w-56 sm:h-72 sm:w-72 rounded-full blur-2xl"
               style={{ background: "radial-gradient(circle, oklch(0.82 0.14 85 / 0.35), transparent 70%)" }}
             />
-            <Kalash className="w-32 sm:w-44 drop-shadow-[0_0_25px_oklch(0.82_0.14_85/0.55)]" />
+            <OmSymbol className="w-36 sm:w-48 drop-shadow-[0_0_25px_oklch(0.82_0.14_85/0.55)]" />
           </motion.div>
 
           <motion.p
