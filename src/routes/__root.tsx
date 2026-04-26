@@ -29,18 +29,38 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Gṛhapravēśam — Housewarming Invitation" },
-      { name: "description", content: "Join us in blessing our new home. A traditional Gṛhapravēśam ceremony invitation." },
-      { name: "author", content: "Gṛhapravēśam" },
-      { property: "og:title", content: "Gṛhapravēśam — Housewarming Invitation" },
-      { property: "og:description", content: "Join us in blessing our new home. A traditional Gṛhapravēśam ceremony invitation." },
+      { title: "Gṛhapravēśha — Housewarming Invitation" },
+      {
+        name: "description",
+        content:
+          "Join us in blessing our new home. A traditional Gṛhapravēśha ceremony invitation.",
+      },
+      { name: "author", content: "Gṛhapravēśha" },
+      { property: "og:title", content: "Gṛhapravēśha — Housewarming Invitation" },
+      {
+        property: "og:description",
+        content:
+          "Join us in blessing our new home. A traditional Gṛhapravēśha ceremony invitation.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Gṛhapravēśam — Housewarming Invitation" },
-      { name: "twitter:description", content: "Join us in blessing our new home. A traditional Gṛhapravēśam ceremony invitation." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/714afd3f-ac37-49a3-9f10-f13e11f12c06/id-preview-a8748288--69e79bd0-6b83-4c13-b07a-8e711364a88a.lovable.app-1777185875592.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/714afd3f-ac37-49a3-9f10-f13e11f12c06/id-preview-a8748288--69e79bd0-6b83-4c13-b07a-8e711364a88a.lovable.app-1777185875592.png" },
+      { name: "twitter:title", content: "Gṛhapravēśha — Housewarming Invitation" },
+      {
+        name: "twitter:description",
+        content:
+          "Join us in blessing our new home. A traditional Gṛhapravēśha ceremony invitation.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/714afd3f-ac37-49a3-9f10-f13e11f12c06/id-preview-a8748288--69e79bd0-6b83-4c13-b07a-8e711364a88a.lovable.app-1777185875592.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/714afd3f-ac37-49a3-9f10-f13e11f12c06/id-preview-a8748288--69e79bd0-6b83-4c13-b07a-8e711364a88a.lovable.app-1777185875592.png",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
