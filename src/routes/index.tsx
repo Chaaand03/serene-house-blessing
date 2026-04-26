@@ -13,12 +13,12 @@ export const Route = createFileRoute("/")({
 
 const HOUSE_NAME = "Charvi Kunj";
 const EVENT_DATE = "Thursday, 7th May 2026";
-const EVENT_TIME = "10:30 AM onwards";
+const EVENT_TIME = "12:30 PM onwards";
 const EVENT_ADDRESS =
-  "# villa 69, Prithvi Orchids Villa, Survey No 15 & 16, Anaganahalli (Pura) Village, Belagola Hobli, Srirangapatna, Mysore Karnatak - 571606 (Next to Emerald Enclave)";
+  "# Charvi Kunj - 69, Prithvi Orchids Villa, Behind Infosys, Next to Emarald Enclave, Mysore";
 const MAPS_URL =
   "https://www.google.com/maps/place/12%C2%B022'17.2%22N+76%C2%B035'30.4%22E/@12.371445,76.5891911,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.371445!4d76.591766?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D";
-const FAMILY = ["Smt. Nagarathna H M", "Shri. Virupakshappa M P", "&", "Chandan V"];
+const FAMILY = ["Shri. Virupakshappa M P", "Smt. Nagarathna H M", "&", "Chandan V"];
 
 function Index() {
   return (
