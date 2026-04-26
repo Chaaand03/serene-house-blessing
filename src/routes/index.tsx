@@ -15,11 +15,10 @@ const HOUSE_NAME = "Charvi Kunj";
 const EVENT_DATE = "Thursday, 7th May 2026";
 const EVENT_TIME = "10:30 AM onwards";
 const EVENT_ADDRESS =
-  "# villa 69, Prithvi Orchids Villa, Survey No 15 & 16, Anaganahalli (Pura) Village, Belagola Hobli, Srirangapatna, Mysore Karnatak - 571606( Next to Emerald Enclave )";
+  "# villa 69, Prithvi Orchids Villa, Survey No 15 & 16, Anaganahalli (Pura) Village, Belagola Hobli, Srirangapatna, Mysore Karnatak - 571606 (Next to Emerald Enclave)";
 const MAPS_URL =
   "https://www.google.com/maps/place/12%C2%B022'17.2%22N+76%C2%B035'30.4%22E/@12.371445,76.5891911,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.371445!4d76.591766?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D";
 const FAMILY = ["Smt. Nagarathna H M", "Shri. Virupakshappa M P", "&", "Chandan V"];
-// const RSVP_WHATSAPP = "https://wa.me/919999999999?text=I%20will%20attend%20the%20Gruhapravesam";
 
 function Index() {
   return (
@@ -152,22 +151,6 @@ function Index() {
         </FadeIn>
 
         <GoldDivider />
-
-        {/* <FadeIn>
-          <section className="text-center">
-            <h2 className="font-serif text-2xl sm:text-3xl text-cream">Kindly let us know</h2>
-            <p className="mt-3 text-cream/60 text-sm">Your presence is the greatest blessing.</p>
-            <a
-              href={RSVP_WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center gap-2 rounded-full border border-gold bg-transparent px-8 py-3 text-cream font-medium transition-all hover:bg-gold/15 hover:shadow-glow"
-            >
-              <Heart className="w-4 h-4 text-gold" />
-              RSVP via WhatsApp
-            </a>
-          </section>
-        </FadeIn> */}
 
         {/* KRISHNA'S FLUTE */}
         <FadeIn delay={0.1}>
