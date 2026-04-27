@@ -54,7 +54,7 @@ function Index() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mt-8 text-xs sm:text-sm tracking-[0.45em] uppercase text-gold font-medium shimmer"
           >
-            ॐ • Gṛhapravēśam • ॐ
+            ॐ • Gṛhapravēśha • ॐ
           </motion.p>
 
           <motion.h1
@@ -154,10 +154,7 @@ function Index() {
 
         {/* KRISHNA'S FLUTE */}
         <FadeIn delay={0.1}>
-          <section className="mt-20 text-center">
-            {/* <p className="text-xs tracking-[0.45em] uppercase text-gold mb-6 shimmer">
-              Murali Naadam · मुरली नादम्
-            </p> */}
+          <section className="mt-6 text-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -167,7 +164,7 @@ function Index() {
             >
               <Bansuri className="w-full" />
             </motion.div>
-            <p className="mt-6 font-serif italic text-cream/70 text-base sm:text-lg max-w-md mx-auto">
+            <p className="mt-6 font-serif italic text-cream/70 text-lg sm:text-lg max-w-md mx-auto">
               May the divine melody of Krishna's bansuri bless this home with peace, love, and
               unending music.
             </p>
@@ -175,9 +172,7 @@ function Index() {
         </FadeIn>
 
         <footer className="mt-20 text-center">
-          {/* <p className="text-xs tracking-[0.35em] uppercase text-gold/80">
-            Śubham Bhavatu • शुभं भवतु
-          </p> */}
+          <p className="text-lg tracking-[0.1em] uppercase text-gold/80">ಶುಭಂ ಭವತು</p>
         </footer>
       </div>
     </main>
@@ -206,7 +201,7 @@ function DetailCard({
         {icon}
       </div>
       <p className="text-[10px] tracking-[0.35em] uppercase text-gold mb-2">{label}</p>
-      <p className="font-serif text-cream text-base leading-snug">{value}</p>
+      <p className="font-serif text-cream text-xl leading-snug">{value}</p>
     </div>
   );
 }

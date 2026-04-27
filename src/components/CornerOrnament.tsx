@@ -112,15 +112,12 @@ export function CornerOrnament({ className = "" }: { className?: string }) {
       </g>
 
       {/* Diya (oil lamp) — bottom right of cluster */}
-      <g transform="translate(135, 130)">
-        {/* Glow */}
+      {/* <g transform="translate(135, 130)">
         <circle cx="0" cy="-18" r="28" fill="url(#coLamp)" opacity="0.55" />
-        {/* Lamp body — almond shape */}
         <path
           d="M -24 0 Q -24 14, 0 16 Q 24 14, 24 0 Q 18 -4, 0 -3 Q -18 -4, -24 0 Z"
           fill="url(#coDiya)"
         />
-        {/* Rim highlight */}
         <path
           d="M -22 -1 Q 0 -5 22 -1"
           stroke="oklch(0.95 0.13 90)"
@@ -128,9 +125,7 @@ export function CornerOrnament({ className = "" }: { className?: string }) {
           fill="none"
           opacity="0.8"
         />
-        {/* Wick */}
         <rect x="-0.8" y="-9" width="1.6" height="6" fill="oklch(0.30 0.06 50)" />
-        {/* Flame */}
         <path
           d="M0 -28 Q 5 -20 3 -12 Q 0 -8 -3 -12 Q -5 -20 0 -28 Z"
           fill="url(#coFlame)"
@@ -140,7 +135,7 @@ export function CornerOrnament({ className = "" }: { className?: string }) {
           fill="oklch(1 0.05 90)"
           opacity="0.9"
         />
-      </g>
+      </g> */}
     </svg>
   );
 }
